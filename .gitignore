@@ -1,0 +1,6 @@
+Archive.zip
+backend/venv/
+frontend/node_modules/
+__pycache__/
+*.pyc
+.env
