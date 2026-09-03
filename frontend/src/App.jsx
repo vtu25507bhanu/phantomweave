@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
 import Dashboard from "./pages/Dashboard";
@@ -31,14 +31,14 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admin-login" element={<AdminLoginHoneypot />} />
         <Route path="/audit-log" element={<AuditLog />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
