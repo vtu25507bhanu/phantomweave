@@ -10,19 +10,21 @@ function Home() {
   const [status, setStatus] = useState("Loading...");
 
   useEffect(() => {
-    axios.get("http://localhost:8000/")
+    axios.get("https://phantomweave.onrender.com/")
       .then((response) => {
         setStatus(response.data.status);
       })
       .catch(() => {
-        setStatus("Backend not reachable. uvicorn server run అవుతుందో చెక్ చేయండి.");
+        setStatus("Backend not reachable. Please check the backend server.");
       });
   }, []);
 
   return (
     <div style={{ padding: "40px", fontFamily: "sans-serif" }}>
       <h1>PhantomWeave</h1>
-      <p>Backend status: <strong>{status}</strong></p>
+      <p>
+        Backend status: <strong>{status}</strong>
+      </p>
     </div>
   );
 }
@@ -41,3 +43,4 @@ function App() {
 }
 
 export default App;
+
